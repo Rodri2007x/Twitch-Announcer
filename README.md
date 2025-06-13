@@ -1,29 +1,41 @@
 # Twitch Announcer 📢
 
-¡Una aplicación de escritorio súper sencilla que te avisa cuando tus streamers favoritos de Twitch empiezan un directo!
+¿Cansado de perderte los directos de tus streamers favoritos? ¡Se acabó!
 
-## ¿Cómo funciona? ¡Más fácil imposible!
+Esta pequeña aplicación para tu PC te avisa justo cuando empiezan, para que no te pierdas ni un segundo de la acción.
 
-Imagina que no quieres perderte nunca el directo de tu streamer preferido. Con esta aplicación, solo tienes que...
+---
 
-1.  **Añadir el canal:** Escribe el nombre del canal de Twitch (por ejemplo, `ibai`) y pulsa el botón **"Añadir Canal"**.
-2.  **¡Y ya está!** La aplicación se encargará de revisar Twitch cada cierto tiempo.
+## Guía rápida de uso
 
-Cuando uno de tus canales empiece a emitir, verás que su estado cambia a **"🟢 Online"** y te saltará una pequeña ventana para avisarte.
+-   **Añadir un canal:** Escribe el nombre en la caja de texto y pulsa **"Añadir Canal"**.
+-   **Eliminar un canal:** Haz clic en un canal de la lista y luego pulsa **"Eliminar Seleccionado"**.
+-   **Ajustar el tiempo:** Mueve la barrita de abajo para decidir cada cuánto tiempo quieres que la app revise si hay nuevos directos (entre 30 segundos y 5 minutos).
+-   **Que se inicie sola:** Marca la casilla **"Iniciar con Windows"** y la aplicación se abrirá automáticamente cada vez que enciendas el ordenador.
 
-
-
-## ¿Qué puedes hacer con la App?
-
--   **Añadir y eliminar** todos los canales que quieras.
--   Ver de un vistazo quién está **Online** y quién **Offline**.
--   **Ajustar cada cuánto tiempo** quieres que la aplicación compruebe los directos (¡desde 30 segundos hasta 5 minutos!).
--   Marcar la casilla **"Iniciar con Windows"** para que la aplicación se encienda sola cada vez que inicies tu PC.
+---
 
 ## ¿Cómo la instalo?
 
-¡No necesitas instalar nada!
+Fácil, ¡no se instala!
 
-1.  Ve a la sección de **[Releases](https://github.com/Rodri2007x/Twitch-Announcer/releases)** que verás en esta misma página (a la derecha).
-2.  Descarga el archivo `TwitchAnnouncer.exe` de la última versión.
-3.  Haz doble clic en el archivo... ¡y a funcionar! Puedes ponerlo en tu escritorio o donde quieras.
+1.  Ve a la sección de **[Releases](https://github.com/Rodri2007x/Twitch-Announcer/releases)** (la encontrarás a la derecha, en esta misma página).
+2.  Descarga el archivo que se llama `TwitchAnnouncer.exe`.
+3.  Guárdalo donde quieras (en el Escritorio, en una carpeta...) y haz doble clic para abrirlo. ¡Listo!
+
+---
+
+## ¿Cómo funciona por dentro? (Para los más curiosos 🤓)
+
+Te estarás preguntando... ¿cómo sabe la aplicación si un canal está en directo? ¿Usa magia?
+
+Casi, pero no. El proceso es bastante ingenioso y sencillo:
+
+1.  **Visita la página:** Cada cierto tiempo (el que tú elijas con la barrita), el programa visita la página de Twitch de cada canal que has añadido (como si lo hicieras tú en tu navegador, pero de forma invisible).
+2.  **Lee el código fuente:** Una vez en la página, lee su código HTML. No te asustes, no es tan complicado como suena.
+3.  **Busca una pista clave:** Dentro de todo ese código, busca una frase muy específica: `"isLiveBroadcast":true`. Esta es la señal que Twitch deja en su página para indicar que ese canal está emitiendo en directo.
+4.  **¡Bingo!**
+    *   Si encuentra esa frase, significa que el canal está **Online**, y te lanza la notificación.
+    *   Si no la encuentra, significa que está **Offline**, y sigue esperando tranquilamente hasta la próxima comprobación.
+
+Y ya está. Sin necesidad de contraseñas, ni de registrar la aplicación en Twitch, ni nada complicado. ¡Simple y efectivo!
