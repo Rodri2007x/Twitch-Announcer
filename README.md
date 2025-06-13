@@ -19,11 +19,9 @@
 
 ---
 
-## ¿Cómo funciona por dentro? (Para los más curiosos 🤓)
+## ¿Cómo funciona por dentro? 
 
-Te estarás preguntando... ¿cómo sabe la aplicación si un canal está en directo? ¿Usa magia?
-
-Casi, pero no. El proceso es bastante ingenioso y sencillo:
+El proceso es bastante sencillo:
 
 1.  **Visita la página:** Cada cierto tiempo (el que tú elijas con la barrita), el programa visita la página de Twitch de cada canal que has añadido (como si lo hicieras tú en tu navegador, pero de forma invisible).
 2.  **Lee el código fuente:** Una vez en la página, lee su código HTML. No te asustes, no es tan complicado como suena.
